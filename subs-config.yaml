@@ -1,0 +1,23 @@
+---
+source: output
+destination: final
+substitutes:
+  '.*\.html':
+    '<!-- include:sidebar-en -->':
+      file: sidebar-en.inc
+create_index_filename: index.html
+create_index_content: |
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>there's nothing to see here.</title>
+      <meta name="robots" content="noindex">
+      <meta http-equiv="refresh" content="0; url=..">
+    </head>
+    <body>
+      there's nothing to see here. go <a href="..">here</a> instead.
+    </body>
+  </html>
+encoding: utf-8
+doit_config:
+  dep_file: '.doit-subs.db'
